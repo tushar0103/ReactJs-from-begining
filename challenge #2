@@ -1,0 +1,56 @@
+import React from 'react';
+import './App.css';
+import './greet.css';
+
+function App() {
+  let curdate = new Date();
+  let hour = curdate.getHours();
+  let greeting = '';
+  const cssapply = {};
+
+  if (hour >= 1 && hour < 12) {
+    greeting = 'Good morning';
+    cssapply.color = 'green';
+  } else if (hour >= 12 && hour < 18) {
+    greeting = 'Good afternoon';
+    cssapply.color = 'blue';
+  } else {
+    greeting = 'Good evening';
+    cssapply.color = 'black';
+  }
+
+  return (
+    <>
+      <div className="name">
+        <h1>
+          Hello sir,<span style={cssapply}> {greeting}</span>
+        </h1>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+
+
+//++++++++++++++++++++++++++css++++++++++++++++++++++++++
+
+h1{
+    color: red;
+
+
+}
+.name{
+    width: 500px;
+    height: 100px;
+    align-items: center;
+   background-color: aqua;
+   position: relative;
+   top: 200px;
+   left: 300px;
+   display: grid;
+   align-items: center;
+   padding: 30px;
+   border: solid 2px ;
+}
