@@ -1,0 +1,19 @@
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  var name='Tushar kumar';
+  const curdate= new Date().toLocaleDateString();
+  const curtime= new Date().toLocaleTimeString();
+  return (
+    <>
+    <h1>Hello my name is : {name}</h1>
+<p>That is me who think that we have see dreams because if we dont then we fullfill those.</p> 
+
+now the date is: {curdate}  <br />
+now the time is: {curtime}
+    </>
+  );
+}
+
+export default App;
