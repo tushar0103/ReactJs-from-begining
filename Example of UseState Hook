@@ -1,0 +1,18 @@
+import React, { useState } from 'react'
+
+const UseStateEx = () => {
+
+ const [count, upstate]= useState(0);
+    const Incnum=() =>{
+         upstate(count+1);
+       console.log("clicked");
+    }
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={Incnum}>click me</button>
+    </>
+  )
+}
+
+export default UseStateEx
