@@ -1,0 +1,20 @@
+import React, { useState } from 'react'
+
+const UseStateEx = () => {
+
+    let time= new Date().toLocaleString();
+  const [ctime, update]= useState(time);
+    const updateTime= ()=>{
+        let time= new Date().toLocaleString();
+        update(time);
+    }
+ setInterval(updateTime,1000);
+  return (
+    <>
+     <h1>{time}</h1>
+     <button onClick={updateTime}>click me</button>
+    </>
+  )
+}
+
+export default UseStateEx
